@@ -20,9 +20,9 @@ fi
 archivo="$1"
 ruta="$2"
 
-if test -f "$archivo" && test -d "$ruta"; then 
+if test -f "/tmp/$archivo" && test -d "$ruta"; then 
 	#"recuperar" archivo
-	mv /tmp/"$archivo" "$ruta"
+	mv "/tmp/$archivo" "$ruta"
 	echo "archivo recuperado"
 else
 	echo "archivo y/o directorio no valido"
