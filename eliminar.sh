@@ -20,8 +20,6 @@ archivo="$1"
 
 #validar archivo
 if test -f "$archivo"; then 
-	echo "archivo borrado"
+	#"borrar" archivo
+	mv "$archivo" /tmp
 fi
-
-#"borrar" archivo
-mv "$archivo" /tmp
