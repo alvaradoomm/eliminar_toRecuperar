@@ -18,8 +18,10 @@ fi
 
 archivo="$1"
 
-#validar archivo
 if test -f "$archivo"; then 
 	#"borrar" archivo
 	mv "$archivo" /tmp
+	echo "archivo borrado"
+else 
+	echo "archivo no valido"
 fi

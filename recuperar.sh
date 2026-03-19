@@ -20,14 +20,10 @@ fi
 archivo="$1"
 ruta="$2"
 
-#validar archivo
-if test -f "$archivo"; then 
-	echo "archivo borrado"
-fi
-
-#validar ruta
-if test -d "$ruta"; then
+if test -f "$archivo" && test -d "$ruta"; then 
 	#"recuperar" archivo
 	mv /tmp/"$archivo" "$ruta"
 	echo "archivo recuperado"
+else
+	echo "archivo y/o directorio no valido"
 fi
